@@ -1,17 +1,37 @@
-// #include <stdio.h>
-// #include <my_mat.h>
+#include <stdio.h>
+#include "my_mat.h"
+#include <stdlib.h>
 
-// int get_matrix(int [], int []);
+int main()
+{
 
-// int is_traffic(int, int);
+    char c;
+    scanf("%c", &c);
 
-// void floy_war_alg(int, int);
+    while (c != 'D')
+    {
 
-// // int main(){
-// //     printf("Enter your matrix 10x10 here: ");
-// //     int get_matrix();
-// //     switch 
-
-// //     }
-    
-// // }
+        if (c == 'A')
+        {
+            Func_A();
+            scanf("%c", &c);
+        }
+        else if (c == 'B')
+        {
+            if ("%d",Func_B())
+            {
+                printf("TRUE");
+            }
+            else
+            {
+                printf("FALSE");
+            }
+            scanf("%c", &c);
+        }
+        else
+        {
+            printf("%d", Func_C());
+            scanf("%c", &c);
+        }
+    }
+}
