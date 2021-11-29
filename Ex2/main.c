@@ -6,7 +6,7 @@ int main()
 {
 
     char c;
-    scanf("%c", &c);
+    scanf(" %c", &c);
 
     while (c != 'D')
     {
@@ -14,11 +14,11 @@ int main()
         if (c == 'A')
         {
             Func_A();
-            scanf("%c", &c);
         }
         else if (c == 'B')
         {
-            if ("%d",Func_B())
+            char a = Func_B();
+            if (a != 0)
             {
                 printf("TRUE");
             }
@@ -26,12 +26,21 @@ int main()
             {
                 printf("FALSE");
             }
-            scanf("%c", &c);
+            printf("\n");
         }
         else
         {
-            printf("%d", Func_C());
-            scanf("%c", &c);
+            int a = Func_C();
+            if (a)
+            {
+                printf("%d", a);
+            }
+            else{
+                printf("%d", -1);
+            }
+            printf("\n");
         }
+
+        scanf(" %c", &c);
     }
 }
